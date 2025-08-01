@@ -173,10 +173,10 @@ class BackendTester:
                 
                 # Test topic count matches curriculum data
                 expected_counts = {
-                    "Türkçe": 40,
-                    "Fizik": 49, 
-                    "Kimya": 27,
-                    "Biyoloji": 31,
+                    "Türkçe": 43,
+                    "Fizik": 58, 
+                    "Kimya": 33,
+                    "Biyoloji": 34,
                     "Matematik": 28
                 }
                 
