@@ -149,8 +149,8 @@ body {
 /* Mobile responsiveness */
 @media (max-width: 768px) {
   .container {
-    padding-left: 1rem;
-    padding-right: 1rem;
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
   }
   
   .stats-card {
@@ -158,12 +158,70 @@ body {
   }
   
   .text-4xl {
-    font-size: 2rem;
+    font-size: 1.875rem;
   }
   
   .text-6xl {
-    font-size: 3rem;
+    font-size: 2.5rem;
   }
+  
+  /* Mobile-first optimizations */
+  body {
+    touch-action: manipulation;
+    -webkit-text-size-adjust: none;
+  }
+  
+  /* Better touch targets */
+  .stats-card {
+    min-height: 120px;
+    padding: 1.25rem;
+  }
+  
+  button {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 0.75rem;
+  }
+  
+  .checkbox-custom {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+  
+  /* Larger text for mobile */
+  h1 {
+    font-size: 2rem !important;
+  }
+  
+  h2 {
+    font-size: 1.5rem !important;
+  }
+  
+  h3 {
+    font-size: 1.25rem !important;
+  }
+  
+  p {
+    font-size: 1rem !important;
+  }
+}
+
+/* PWA styles for app-like experience */
+@media (display-mode: standalone) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* Prevent zoom on input focus */
+input, select, textarea {
+  font-size: 16px;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
 /* Loading animation */
